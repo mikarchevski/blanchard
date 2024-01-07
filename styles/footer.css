@@ -1,0 +1,24 @@
+.footer {
+  display: block;
+  background: #000000;
+}
+.footer__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 51px 0 42px;
+}
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  gap: 20px;
+}
+.footer__social-list-item-svg {
+  width: 45px;
+}
+.footer__social-list-item-svg:hover {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(122deg) brightness(200%) contrast(100%);
+}
+
+/*# sourceMappingURL=footer.css.map */
