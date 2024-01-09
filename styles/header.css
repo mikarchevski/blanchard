@@ -169,5 +169,29 @@
     display: flex;
   }
 }
+@media (max-width: 550px) {
+  .header {
+    padding: 12px 0;
+  }
+  .header__mobile-burger {
+    width: 25px;
+    height: 18px;
+  }
+  .header__mobile-burger-span:nth-child(2) {
+    top: 6px;
+    width: 69%;
+  }
+  .header__mobile-burger-span:last-child {
+    width: 45%;
+  }
+  .header__mobile-logo {
+    width: 96.8px;
+    height: 21.672px;
+  }
+  .header__mobile-search {
+    width: 18px;
+    height: 18px;
+  }
+}
 
 /*# sourceMappingURL=header.css.map */

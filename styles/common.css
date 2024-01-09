@@ -1,8 +1,7 @@
 @charset "UTF-8";
 .container {
+  width: 1600px;
   margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -202,6 +201,11 @@ button:active {
   max-width: 600px;
   padding-bottom: 92px;
 }
+.top__slider-article-wrap {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
 .top__slider-article-title {
   display: inline-block;
   position: relative;
@@ -235,7 +239,7 @@ button:active {
 .about-us {
   display: block;
   position: relative;
-  padding: 78px 0 70px;
+  padding: 81px 0 70px;
 }
 .about-us__article {
   display: block;
@@ -266,7 +270,6 @@ button:active {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 80px 0;
-  height: 835px;
 }
 .gallery__wrap {
   display: flex;
@@ -277,7 +280,6 @@ button:active {
   position: relative;
   flex-direction: column;
   max-width: 401px;
-  height: 845px;
   width: 400px;
   margin: 0 51px 0 0;
 }
@@ -369,6 +371,12 @@ button:active {
   font-weight: 600;
   line-height: 32px;
 }
+.gallery__desktop {
+  display: block;
+}
+.gallery__mobile {
+  display: none;
+}
 .gallery-swiper-slide {
   display: block;
   position: relative;
@@ -406,7 +414,6 @@ button:active {
   display: block;
   position: relative;
   padding: 81px 0;
-  height: 1393px;
 }
 .catalog__about {
   max-width: 1080px;
@@ -429,9 +436,6 @@ button:active {
   position: relative;
   list-style: none;
   padding: 0px 0 8px 0;
-}
-.catalog__about-countries-list-item {
-  padding: 0 26px 0 0;
 }
 .catalog__about-countries-list-item-link {
   text-decoration: none;
@@ -462,6 +466,9 @@ button:active {
   margin: 10px;
   padding: 0;
 }
+.catalog__about-countries-list-item:not(:last-child) {
+  padding: 0 26px 0 0;
+}
 .catalog__about-desc {
   font-size: 1.6em;
   font-style: normal;
@@ -475,7 +482,7 @@ button:active {
   gap: 50px;
 }
 .catalog__info-desc {
-  width: 750px;
+  width: 50%;
 }
 .catalog__info-desc-photo {
   display: block;
@@ -483,7 +490,8 @@ button:active {
   height: 470px;
 }
 .catalog__info-desc-photo-img {
-  width: auto;
+  width: 100%;
+  height: auto;
 }
 .catalog__info-desc-article {
   padding: 30px 0 0 0;
@@ -524,11 +532,9 @@ button:active {
 .catalog__info-accordion-list-item {
   width: 100%;
   font-family: Open Sans;
-  font-size: 24px;
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
-  /* 133.333% */
   overflow: hidden;
 }
 .catalog__info-accordion-list-item-input {
@@ -541,7 +547,7 @@ button:active {
   justify-content: space-between;
   padding: 42px 0 31px;
   font-family: Open Sans;
-  font-size: 24px;
+  font-size: 2.4em;
   font-style: normal;
   font-weight: 600;
   line-height: 32px;
@@ -586,10 +592,11 @@ button:active {
 .catalog__info-accordion-artists-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   flex-direction: column;
   list-style: none;
   padding: 24px 0 0 0;
-  max-height: 306px;
+  max-height: 384px;
   max-width: 731px;
 }
 .catalog__info-accordion-artists-list-item {
@@ -622,7 +629,7 @@ button:active {
   position: relative;
   padding: 0 0 76px 0;
 }
-.events__mobitle {
+.events__mobile {
   display: none;
 }
 .events__title {
@@ -645,14 +652,14 @@ button:active {
 .events__list-item {
   display: block;
   position: relative;
-  width: 498px;
+  width: 31%;
   height: 700px;
   border: 1px solid #CACACA;
 }
 .events__list-item-logo {
   display: block;
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  height: auto;
 }
 .events__list-item-logo-img {
   width: 100%;
@@ -865,6 +872,12 @@ button:active {
   border: 2px solid #9D5CD0;
   padding: 7px 20px;
 }
+.publications__Swiper {
+  display: block;
+}
+.publications__books-mobile {
+  display: none;
+}
 
 .projects {
   display: block;
@@ -872,7 +885,7 @@ button:active {
   padding: 81px 0;
 }
 .projects__articles {
-  width: 1080px;
+  max-width: 1080px;
   padding: 0 0 19px 0;
 }
 .projects__articles-title {
@@ -890,7 +903,7 @@ button:active {
   position: relative;
   width: 16px;
   height: 16px;
-  font-size: 13px;
+  font-size: 1.3em;
   font-weight: 600;
   line-height: 1;
   background-color: transparent;

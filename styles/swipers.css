@@ -1,3 +1,19 @@
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
 .mySwiper {
   display: inline-block !important;
   position: absolute !important;
@@ -5,6 +21,11 @@
   z-index: -1;
   width: 100% !important;
   height: 800px;
+}
+@media (max-width: 670px) {
+  .mySwiper {
+    height: 355px;
+  }
 }
 
 .top-swiper-container,
@@ -22,8 +43,6 @@
 }
 
 .gallerySwiper {
-  padding: 26px 0 0 0;
-  width: 2000px !important;
   height: 100%;
 }
 
@@ -40,6 +59,11 @@
   height: 30px;
   width: 130px;
   margin: 0 0 30px 0;
+}
+@media (max-width: 1200px) {
+  .gallerySwiper-nav {
+    margin: 25px 0 30px 0;
+  }
 }
 
 .gallery-swiper-button-next,
@@ -101,7 +125,7 @@
   padding: 0 4px 0px 0px;
 }
 
-.publicationsSwiper {
+.publications__Swiper {
   padding: 50px 0 0 0;
 }
 
@@ -160,7 +184,12 @@
 }
 
 .projectsSwiper {
-  max-width: 1448px !important;
+  max-width: 1456px !important;
+}
+@media (max-width: 1200px) {
+  .projectsSwiper {
+    max-width: 820px !important;
+  }
 }
 
 .projects-swiper-slide {
@@ -189,6 +218,19 @@
 
 .projects-swiper-button-prev {
   transform: rotate(180deg);
+}
+
+.gallerySwiperMobile {
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+  min-height: 0;
+  min-width: 0;
+}
+.gallerySwiperMobile-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=swipers.css.map */

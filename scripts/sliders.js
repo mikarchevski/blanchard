@@ -3,11 +3,12 @@ var swiper = new Swiper(".mySwiper", {
     speed: 2000,
     effect: "fade",
     crossFade: true,
-    autoplay: {
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   disableOnInteraction: false,
+    // },
   });
   
+
 
 
 var swiper1 = new Swiper(".gallerySwiper", {
@@ -17,7 +18,6 @@ var swiper1 = new Swiper(".gallerySwiper", {
       rows: 2,
       fill: "row",
     },
-    spaceBetween: 49,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -29,6 +29,28 @@ var swiper1 = new Swiper(".gallerySwiper", {
         return '<span class="' + currentClass + '"></span>' + '/'+
                 '<span class="' + totalClass + '"></span>';
         },
+      },
+      breakpoints: {
+        
+        640: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 34,
+        },
+        1200:{
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 40,
+        }
       },
   });
 
@@ -58,7 +80,7 @@ var swiper1 = new Swiper(".gallerySwiper", {
 //     // }  
 //  }
 
-  var swiper = new Swiper(".publicationsSwiper", {
+  var swiper2 = new Swiper(".publications__Swiper", {
     slidesPerView: 3,
     slidesPerGroup: 3,
     grid: {
@@ -78,20 +100,67 @@ var swiper1 = new Swiper(".gallerySwiper", {
                 '<span class="' + totalClass + '"></span>';
         },
     },
-    
+    breakpoints: {
+        
+      640: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 34,
+      },
+      1200:{
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 40,
+      }
+    },
   });
 
-  var swiper = new Swiper(".projectsSwiper", {
-    slidesPerView: 3,
-    slidesPerGroup: 3,
+  var swiper3 = new Swiper(".projectsSwiper", {
+    slidesPerView: 2,
+    slidesPerGroup: 2,
     grid: {
       rows: 1,
     },
-    spaceBetween: 46,
+    spaceBetween: 50,
     navigation: {
         nextEl: ".projects-swiper-button-next",
         prevEl: ".projects-swiper-button-prev",
       },
+  });
+
+  var swiper4 = new Swiper(".eventSwiper", {
+    spaceBetween: 15,
+    pagination: {
+      el: ".event-swiper-pagination",
+    },
+  }); 
+
+  //
+  // var swiper5 = new Swiper(".gallerySwiperMobile", {
+  //   spaceBetween: 15,
+  // }); 
+  var swiper = new Swiper(".gallerySwiperMobile", {
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+      renderFraction: function (currentClass, totalClass) {
+      return '<span class="' + currentClass + '"></span>' + '/'+
+              '<span class="' + totalClass + '"></span>';
+      },
+    },
   });
 
 function topMenu(){
@@ -195,7 +264,7 @@ function gallerySliderHover(){
       let item = e.currentTarget.dataset.path;
       sliderImg.forEach(e=>{
         let currentImg = document.querySelector(`[data-path=${item}]`);
-        console.log(currentImg);
+
 
         if (!currentImg.classList.contains('hover')){
           e.classList.remove('hover');
@@ -217,7 +286,7 @@ let intervalId2;
     document.querySelectorAll('.catalog__about-countries-list-item-link-img').forEach(e=>{
     
     let currentItem = document.querySelector(`[data-path=${item}]`);
-    console.log(currentItem);
+
     if (!currentItem.classList.contains('test')){
       e.classList.remove('test');
       e.classList.remove('catalog__about-countries-list-item-link-img--active');

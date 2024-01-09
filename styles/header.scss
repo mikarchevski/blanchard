@@ -177,4 +177,31 @@
             display: flex;
         }
     }
+
+    @media(max-width:550px){
+        padding: 12px 0;
+        &__mobile{
+            &-burger{
+                width: 25px;
+                height: 18px;
+                &-span{
+                    &:nth-child(2){
+                        top: 6px;
+                        width: 69%;
+                    }
+                    &:last-child{
+                        width: 45%;
+                    }
+                }
+            }
+            &-logo{
+                width: 96.8px;
+                height: 21.672px;
+            }
+            &-search{
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
 }

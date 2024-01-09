@@ -1,7 +1,8 @@
 .container {
+    width: 1600px;
     margin: 0 auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    // padding-right: 30px;
+    // padding-left: 30px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -243,6 +244,11 @@ button {
         }
 
         &-article {
+            &-wrap{
+                display: flex;
+                position: relative;
+                flex-direction: column;
+            }
             display: block;
             position: relative;
             max-width: 600px;
@@ -286,7 +292,7 @@ button {
 .about-us {
     display: block;
     position: relative;
-    padding: 78px 0 70px;
+    padding: 81px 0 70px;
 
     &__article {
         display: block;
@@ -320,7 +326,6 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 80px 0;
-    height: 835px;
 
     &__wrap {
         display: flex;
@@ -332,7 +337,6 @@ button {
         position: relative;
         flex-direction: column;
         max-width: 401px;
-        height: 845px;
         width: 400px;
         margin: 0 51px 0 0;
 
@@ -440,7 +444,12 @@ button {
             }
         }
     }
-
+    &__desktop{
+        display: block;
+    }
+    &__mobile{
+        display: none;
+    }
     &-swiper {
         &-slide {
             display: block;
@@ -487,7 +496,6 @@ button {
     display: block;
     position: relative;
     padding: 81px 0;
-    height: 1393px;
 
     &__about {
         max-width: 1080px;
@@ -515,7 +523,7 @@ button {
                 padding: 0px 0 8px 0;
 
                 &-item {
-                    padding: 0 26px 0 0;
+                   
 
                     &-link {
                         text-decoration: none;
@@ -552,7 +560,9 @@ button {
                             }
                         }
                     }
-
+                    &:not(:last-child){
+                        padding: 0 26px 0 0;
+                    }
                 }
             }
         }
@@ -572,7 +582,7 @@ button {
         gap: 50px;
 
         &-desc {
-            width: 750px;
+            width: 50%;
 
             &-photo {
                 display: block;
@@ -580,7 +590,8 @@ button {
                 height: 470px;
 
                 &-img {
-                    width: auto;
+                    width: 100%;
+                    height: auto;
                 }
             }
 
@@ -629,11 +640,9 @@ button {
                 &-item {
                     width: 100%;
                     font-family: Open Sans;
-                    font-size: 24px;
                     font-style: normal;
                     font-weight: 600;
                     line-height: 32px;
-                    /* 133.333% */
                     overflow: hidden;
 
                     &-input {
@@ -647,7 +656,7 @@ button {
                         justify-content: space-between;
                         padding: 42px 0 31px;
                         font-family: Open Sans;
-                        font-size: 24px;
+                        font-size: 2.4em;
                         font-style: normal;
                         font-weight: 600;
                         line-height: 32px;
@@ -706,10 +715,11 @@ button {
                 &-list {
                     display: flex;
                     flex-wrap: wrap;
+                    justify-content: space-between;
                     flex-direction: column;
                     list-style: none;
                     padding: 24px 0 0 0;
-                    max-height: 306px;
+                    max-height: 384px;
                     max-width: 731px;
 
                     &-item {
@@ -755,7 +765,7 @@ button {
     position: relative;
     padding: 0 0 76px 0;
 
-    &__mobitle {
+    &__mobile {
         display: none;
     }
 
@@ -780,14 +790,14 @@ button {
         &-item {
             display: block;
             position: relative;
-            width: 498px;
+            width: 31%;
             height: 700px;
             border: 1px solid #CACACA;
 
             &-logo {
                 display: block;
-                width: 500px;
-                height: 300px;
+                width: 100%;
+                height: auto;
 
                 &-img {
                     width: 100%;
@@ -1054,6 +1064,14 @@ button {
             padding: 7px 20px;
         }
     }
+    &__Swiper{
+        display: block;
+    }
+    &__books{
+        &-mobile{
+            display: none;
+        }
+    }
 }
 
 .projects {
@@ -1062,7 +1080,7 @@ button {
     padding: 81px 0;
 
     &__articles {
-        width: 1080px;
+        max-width: 1080px;
         padding: 0 0 19px 0;
 
         &-title {
@@ -1081,7 +1099,7 @@ button {
                 position: relative;
                 width: 16px;
                 height: 16px;
-                font-size: 13px;
+                font-size: 1.3em;
                 font-weight: 600;
                 line-height: 1;
                 background-color: transparent;

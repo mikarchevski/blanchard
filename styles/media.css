@@ -15,20 +15,289 @@
 }
 @media (max-width: 1200px) {
   .container {
-    width: 925px;
+    width: 930px;
+  }
+  .top {
+    padding-bottom: 0;
+  }
+  .top-swiper-img {
+    scale: 1;
   }
   .top__filters {
     display: none;
+  }
+  .top__slider-article {
+    max-width: 700px;
+    padding-bottom: 133px;
+  }
+  .top__slider-article-wrap {
+    padding: 114px 0;
+  }
+  .top__slider-article-title {
+    padding: 0 0 10px 0;
+  }
+  .gallery {
+    padding: 80px 0;
+  }
+  .gallery-swiper-img {
+    width: 280px;
+    height: 280px;
+  }
+  .gallery-swiper-slide {
+    width: 280px !important;
+    height: 280px !important;
+  }
+  .gallery__desc-filter-selector {
+    width: 280px;
+  }
+  .catalog__info-desc-photo {
+    height: 274px;
+  }
+  .catalog__info-accordion-artists-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .events {
+    padding: 93px 0 79px 0;
+  }
+  .events__list {
+    max-height: 734px;
+  }
+  .events__list-item {
+    height: 682px;
+  }
+  .events__list-item-about {
+    height: auto;
+    padding: 13px 0 0 37px;
+    height: 62%;
+  }
+  .events__list-item-about-name {
+    padding: 0 19px 0 0;
+  }
+  .events__list-item-about-desc {
+    padding: 3px 28px 0 0;
+  }
+  .events__list-item-details {
+    bottom: 0;
+  }
+  .events__list-item:not(:nth-child(3n), :last-child) {
+    margin: 0 29px 50px 0;
+  }
+  .events__list-all {
+    max-height: 1500px;
+  }
+  .publications__desc {
+    padding: 0px 20px 0 0;
+  }
+  .publications-swiper-slide {
+    width: 290px !important;
+  }
+  .publications-swiper-img {
+    width: 290px;
+  }
+  .publications__book-articles {
+    padding: 13px 0 15px 0;
+  }
+  .projects-swiper-slide {
+    width: 384px !important;
+    height: 128px !important;
+  }
+  .contacts__places {
+    padding: 123px 35px 52px 48px;
   }
 }
 @media (max-width: 992px) {
   .container {
     width: 700px;
   }
+  .catalog__about-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .catalog__about-countries-list {
+    align-items: center;
+  }
+  .catalog__about-desc {
+    display: none;
+  }
+  .catalog__info {
+    flex-direction: column-reverse;
+  }
+  .catalog__info-accordion, .catalog__info-desc {
+    width: 100%;
+  }
+  .events__list-item {
+    width: 45%;
+  }
+  .events__list-item:not(:nth-child(3n), :last-child) {
+    margin: 0 29px 50px 0;
+  }
+  .events__list-item:nth-child(2n) {
+    margin: 0 0px 50px 0;
+  }
+  .events__list-item:nth-child(3n) {
+    margin: 0 29px 50px 0;
+  }
+  .contacts__place {
+    padding: 123px 45px 120px 45px;
+    width: 50%;
+  }
 }
 @media (max-width: 768px) {
   .container {
     width: 100%;
+    padding: 0 50px;
+    box-sizing: border-box;
+  }
+  .gallery__desktop {
+    display: none;
+  }
+  .gallery__mobile {
+    display: block;
+  }
+  .gallery__desc-download {
+    position: relative;
+  }
+  .catalog__info-accordion-list-item-label {
+    font-size: 1.8em;
+  }
+  .catalog__info-accordion-list-item-label:after {
+    width: 30px;
+    height: 30px;
+    margin: 0;
+  }
+  .catalog__info-desc-article-about {
+    font-size: 1.2em;
+  }
+  .contacts__wrap {
+    flex-direction: column-reverse;
+  }
+  .contacts__title {
+    font-size: 2.8em;
+  }
+  .contacts__place {
+    width: 100%;
+    padding: 0;
+    border: none;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  .contacts__place-form-title {
+    font-size: 1.8em;
+  }
+  .contacts__place-form-name, .contacts__place-form-phone {
+    width: 290px;
+  }
+  .publications__wrap {
+    flex-direction: column;
+  }
+}
+@media (max-width: 670px) {
+  .top__slider-article {
+    text-align: center;
+  }
+  .top__slider-article-title {
+    font-size: 3.2em;
+    line-height: normal;
+  }
+  .top__slider-article-subtitle {
+    font-size: 1.2em;
+    line-height: normal;
+  }
+  .events__mobile {
+    display: block;
+  }
+  .events__list, .events__showall {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    padding: 0 15px;
+  }
+  .top__slider-article {
+    padding-bottom: 37px;
+  }
+  .top__slider-article-wrap {
+    align-items: center;
+    padding: 29px 0;
+  }
+  .top__slider-article-title {
+    padding: 0px 0 3px 0;
+  }
+  .top__slider-btn {
+    font-size: 1.2em;
+    padding: 12px 10px;
+    width: 200px;
+    height: 40px;
+  }
+  .about-us__article-title {
+    font-size: 2.8em;
+  }
+  .about-us__article-text {
+    font-size: 1.4em;
+  }
+  .gallery__desc-title {
+    font-size: 2.8em;
+  }
+  .gallery__desc-filter {
+    font-size: 1.6em;
+  }
+  .gallery__desc-download {
+    font-size: 1.6em;
+  }
+  .catalog__about-title {
+    font-size: 2.8em;
+  }
+  .catalog__about-countries-list-item:not(:last-child) {
+    padding: 0 9px 0 0;
+  }
+  .catalog__about-countries-list-item-link-img {
+    width: 32px;
+    height: 32px;
+    margin: 6px;
+  }
+  .catalog__about-countries-list-item-link-img--active {
+    padding: 6px;
+  }
+  .catalog__info-accordion-artists-list {
+    max-height: fit-content;
+  }
+  .catalog__info-accordion-artists-list-item {
+    width: 100%;
+  }
+  .events__title {
+    font-size: 2.8em;
+  }
+  .publications__Swiper {
+    display: none;
+  }
+  .publications__books-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .publications__books-list-item {
+    padding-bottom: 49px;
+  }
+  .publications__book-img {
+    width: 130px;
+    height: 143px;
+  }
+  .publications__book-articles {
+    padding: 5px 0 12px 0;
+    flex-direction: column;
+  }
+  .publications__book-about-name, .publications__book-about-author {
+    font-size: 1.2em;
+  }
+  .publications__book-price, .publications__book-order {
+    font-size: 1.2em;
+  }
+  .projects__articles-title {
+    font-size: 2.8em;
+  }
+  .projects__partners-title {
+    font-size: 1.8em;
   }
 }
 

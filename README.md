@@ -1,2 +1,4 @@
 # blanchard
-landing page
+Pet landing page.
+Non-commercial.
+Non-official project.
