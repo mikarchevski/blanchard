@@ -5,12 +5,33 @@
 }
 @media (max-width:1660px){
     .container{
-        width: 1440px;
+        width: 1400px;
+    }
+    .projects{
+        &__Swiper{
+            width: 944px;
+        }
     }
 }
 @media (max-width:1400px){
     .container{
-        width: 1370px;
+        width: 1200px;
+    }
+    .top{
+        &__filters{
+            &-list{
+                &-item{
+                    &:not(:last-child){
+                        padding-right: 50px;
+                    }
+                }
+            }
+            &-search{
+                &-input{
+                    width: 140px;
+                }
+            }
+        }
     }
 }
 @media (max-width:1200px){
@@ -42,15 +63,11 @@
     }
     .gallery{
         padding: 80px 0;
-        &-swiper{
-            
-            &-img{
-                width: 280px;
-                height: 280px;
-            }
-            &-slide{
-                width: 280px !important;
-                height: 280px !important;
+        &-swiper {
+            &-slide {
+                 height: auto !important;
+                 max-width: 280px !important;
+                 width: 280px !important;
             }
         }
         &__desc{
@@ -64,12 +81,9 @@
     }
 
     .catalog{
+        
         &__info{
-            &-desc{
-                &-photo{
-                    height: 274px;
-                }
-            }
+            
             &-accordion{
                 &-artists{
                     &-list{
@@ -132,6 +146,9 @@
     }
 
     .projects{
+        &__Swiper{
+            width: 806px;
+        }
         &-swiper{
             &-slide{
                 width: 384px !important;
@@ -147,10 +164,30 @@
 }
 @media(max-width:992px){
     .container{
-        width: 700px;
+        width: 100%;
+        padding: 0 50px;
+        box-sizing: border-box;
     }
 
-    
+    .gallery{
+        &__desktop{
+            display: none;
+        }
+        &__mobile{
+            display: block;
+        }
+        &__desc{
+            &-filter{
+                &-selector,&-selector-options{
+                    width: 100%;
+                }
+            }
+            &-download{
+                position: relative;
+                padding: 20px 0 0 0;
+            }
+        }
+    }
     .catalog{
         &__about{
             &-wrap{
@@ -190,34 +227,41 @@
             }
         }
     }
-
+    .publications{
+        &__wrap{
+            flex-direction: column;
+        }
+    }
     .contacts{
         &__place{
             padding: 123px 45px 120px 45px;
             width: 50%;
         }
     }
-   
-}
-@media (max-width:768px){
-    .container{
-        width: 100%;
-        padding:0 50px;
-        box-sizing: border-box;
-    }
-    .gallery{
-        &__desktop{
-            display: none;
+
+    .projects{
+        &__Swiper{
+            width: 573px;
         }
-        &__mobile{
-            display: block;
+        &-swiper{
+            &-slide{
+                width: 264px !important;
+                height: 106px !important;
+            }
         }
-        &__desc{
-            &-download{
-                position: relative;
+        &__partners{
+            &-slider{
+                &-img{
+                    width: 210px;
+                    height: 52px;
+                }
             }
         }
     }
+   
+}
+@media (max-width:768px){
+   
     .catalog{
         &__info{
             &-accordion{
@@ -243,7 +287,71 @@
             }
         }
     }
+    .projects{
+        &__Swiper{
+            width: 434px;
+        }
+        &-swiper{
+            &-wrapper{
+                display: flex;
+            }
+            &-slide{
+                width: 195px !important;
+                height: 65px !important;
+            }
+        }
+        &__partners{
+            &-slider{
+                &-img{
+                    width: 104.743px;
+                    height: 25.936px;
+                }
+            }
+        }
+    }
+    .publications{
+        &__Swiper{
+            display: none;
+        }
+        &__books{
+            &-mobile{
+                display: block;
+                padding:30px 0 0 0;
+            }
+            
+            &-list{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                list-style: none;
+                &-item{
+                    padding-bottom: 49px;
+                }
+            }
+            
+        }
+        &__book{
+            &-img{
+                width: 130px;
+                height: 143px;
+            }
+            &-articles{
+                padding: 5px 0 12px 0;
+                flex-direction: column;
+            }
+            &-about{
+                &-name,
+                &-author{
+                    font-size: 1.2em;
+                }
+            }
+            &-price,&-order{
+                font-size: 1.2em;
+            }
+        }
+    }
     .contacts{
+        padding-bottom: 50px;
         &__wrap{
             flex-direction: column-reverse;
         }
@@ -267,11 +375,7 @@
             }
         }
     }
-    .publications{
-        &__wrap{
-            flex-direction: column;
-        }
-    }
+    
 }
 
 @media (max-width:670px){
@@ -296,6 +400,12 @@
         }
         &__list,&__showall{
             display: none;
+        }
+    }
+    
+    .projects{
+        &__Swiper{
+            width: 197px;
         }
     }
 }
@@ -374,6 +484,11 @@
             
         }
         &__info{
+            &-desc{
+                &-photo{
+                    width: 290px;
+                }
+            }
             &-accordion{
                 &-artists{
                     &-list{
@@ -392,42 +507,7 @@
         }
     }
 
-    .publications{
-        
-        &__Swiper{
-            display: none;
-        }
-        &__books{
-            &-list{
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                &-item{
-                    padding-bottom: 49px;
-                }
-            }
-            
-        }
-        &__book{
-            &-img{
-                width: 130px;
-                height: 143px;
-            }
-            &-articles{
-                padding: 5px 0 12px 0;
-                flex-direction: column;
-            }
-            &-about{
-                &-name,
-                &-author{
-                    font-size: 1.2em;
-                }
-            }
-            &-price,&-order{
-                font-size: 1.2em;
-            }
-        }
-    }
+    
 
     .projects{
         &__articles{

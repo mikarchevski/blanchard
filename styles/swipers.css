@@ -20,11 +20,11 @@
   top: -14% !important;
   z-index: -1;
   width: 100% !important;
-  height: 800px;
+  max-height: 800px;
 }
 @media (max-width: 670px) {
   .mySwiper {
-    height: 355px;
+    height: 114%;
   }
 }
 
@@ -43,12 +43,12 @@
 }
 
 .gallerySwiper {
-  height: 100%;
+  max-height: 800px;
 }
-
-.gallery-swiper-slide {
-  width: 350px !important;
-  height: 350px !important;
+@media (max-width: 1200px) {
+  .gallerySwiper {
+    max-height: 670px;
+  }
 }
 
 .gallerySwiper-nav {
@@ -183,12 +183,10 @@
   padding: 0 0 0 5px;
 }
 
-.projectsSwiper {
-  max-width: 1456px !important;
-}
-@media (max-width: 1200px) {
-  .projectsSwiper {
-    max-width: 820px !important;
+@media (max-width: 670px) {
+  .eventSwiper {
+    width: 290px;
+    max-height: 773px;
   }
 }
 

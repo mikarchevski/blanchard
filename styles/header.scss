@@ -162,12 +162,27 @@
             }
         }
     }
+    @media(max-width:1400px){
+        &__desktop{
+            &-menu{
+                &-list{
+                    &-item{
+                        &:not(:last-child){
+                            padding-right: 29px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
 
     @media(max-width:1200px){
         padding: 29px 0;
         &__desktop{
             display: none;
             &-menu{
+                
                 &-list{
                     flex-direction: column;
                 }
@@ -181,16 +196,36 @@
     @media(max-width:550px){
         padding: 12px 0;
         &__mobile{
+            &-overlay{
+                padding: 14px 50px;
+                top: 46px;
+            }
             &-burger{
                 width: 25px;
                 height: 18px;
                 &-span{
                     &:nth-child(2){
-                        top: 6px;
+                        top: 8px;
                         width: 69%;
                     }
                     &:last-child{
                         width: 45%;
+                    }
+                    &--active{
+                        &:first-child{
+                            rotate: 45deg;
+                            top: 4px;
+                        }
+                        &:nth-child(2){
+                            opacity: 0;
+                        }
+                        &:last-child{
+                            width: 100%;
+                            rotate: -45deg;
+                            top: 14px;
+                            left: 3px;
+                            transform-origin: left;
+                        }
                     }
                 }
             }

@@ -571,41 +571,22 @@
                         Фильтр:
                     </p>
                     <div class="gallery__desc-filter-selector">
-                        <div class="gallery__desc-filter-selector-header">
-                            <span class="gallery__desc-filter-selector-header-current">Живопись</span>
-                            <div class="gallery__desc-filter-selector-header-icon">
+                        <div class="gallery__desc-filter-selector-header gallery__desc-filter-selector-header-mobile">
+                            <span class="gallery__desc-filter-selector-header-current gallery__desc-filter-selector-header-current-mobile">Живопись</span>
+                            <div class="gallery__desc-filter-selector-header-icon gallery__desc-filter-selector-header-icon-mobile">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="7" viewBox="0 0 12 7" fill="none">
                                     <path d="M11 1L6 6L1 1" stroke="white"/>
                                 </svg>
                             </div>
                         </div>
-                        <ul class="gallery__desc-filter-selector-options">
-                            <li class="gallery__desc-filter-selector-options-item">Живопись</li>
-                            <li class="gallery__desc-filter-selector-options-item">Рисунок</li>
-                            <li class="gallery__desc-filter-selector-options-item">Скульптура</li>
+                        <ul class="gallery__desc-filter-selector-options gallery__desc-filter-selector-options-mobile">
+                            <li class="gallery__desc-filter-selector-options-item gallery__desc-filter-selector-options-item-mobile">Живопись</li>
+                            <li class="gallery__desc-filter-selector-options-item gallery__desc-filter-selector-options-item-mobile">Рисунок</li>
+                            <li class="gallery__desc-filter-selector-options-item gallery__desc-filter-selector-options-item-mobile">Скульптура</li>
                         </ul>
                     </div>
                 </div>
                 <div class="swiper gallerySwiperMobile">
-                    
-                    <div class="swiper-wrapper gallerySwiperMobile-wrapper">
-                        <div class="swiper-slide gallerySwiperMobile-slide ">
-                            <img src="img/gallery_slider/1-320.jpg" alt="e" class="" data-path="gallery-1">
-                        </div>
-                        <div class="swiper-slide gallerySwiperMobile-slide">
-                            <img src="img/gallery_slider/2-320.jpg" alt="e" class="" data-path="gallery-2">
-                        </div>
-                        <div class="swiper-slide gallerySwiperMobile-slide">
-                            <img src="img/gallery_slider/3-320.jpg" alt="" class="" data-path="gallery-3">
-                        </div>
-                        <div class="swiper-slide gallerySwiperMobile-slide">
-                            <img src="img/gallery_slider/4-320.jpg" alt="" class=""data-path="gallery-4">
-                        </div>
-                        <div class="swiper-slide gallerySwiperMobile-slide">
-                            <img src="img/gallery_slider/5-320.jpg" alt="ee" class=""data-path="gallery-5">
-                        </div>
-                        
-                    </div>
                     <div class="gallerySwiper-nav">
                         <div class="swiper-button-prev gallery-swiper-button-prev">
                             <svg class="slider-btn-svg slider-btn-svg_prev" width="30" height="30" viewBox="0 0 30 30"
@@ -628,6 +609,25 @@
                             </svg>
                         </div>
                     </div>
+                    <div class="swiper-wrapper gallerySwiperMobile-wrapper">
+                        <div class="swiper-slide gallerySwiperMobile-slide ">
+                            <img src="img/gallery_slider/1-320.jpg" alt="e" class="" data-path="gallery-1">
+                        </div>
+                        <div class="swiper-slide gallerySwiperMobile-slide">
+                            <img src="img/gallery_slider/2-320.jpg" alt="e" class="" data-path="gallery-2">
+                        </div>
+                        <div class="swiper-slide gallerySwiperMobile-slide">
+                            <img src="img/gallery_slider/3-320.jpg" alt="" class="" data-path="gallery-3">
+                        </div>
+                        <div class="swiper-slide gallerySwiperMobile-slide">
+                            <img src="img/gallery_slider/4-320.jpg" alt="" class=""data-path="gallery-4">
+                        </div>
+                        <div class="swiper-slide gallerySwiperMobile-slide">
+                            <img src="img/gallery_slider/5-320.jpg" alt="ee" class=""data-path="gallery-5">
+                        </div>
+                        
+                    </div>
+                    
                 </div>
                 <p class="gallery__desc-download">
                     Вам предоставляется 10 бесплатных скачиваний. Для увеличения
@@ -971,115 +971,130 @@
                     <div class="swiper eventSwiper">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
-                            <picture class="events__list-item-logo">
-                                <source srcset="img/events/event1-1024.jpg" media="(max-width:1024px)">
-                                <img src="img/events/event1.jpg" alt="event logo" class="events__list-item-logo-img">
-                            </picture>
-                            <article class="events__list-item-about">
-                                <p class="events__list-item-about-place">
-                                    Музей им. Щусева
-                                    <br>с 20 марта по 30 апреля
-                                </p>
-                                <p class="events__list-item-about-name">
-                                    Книжная гравюра в живом восприятии
-                                </p>
-                                <p class="events__list-item-about-desc">
-                                    Один из ведущих флорентийских художников Кватроченто,
-                                    основатель художественной династии, которую продолжили
-                                    его брат Давид и сын Ридольфо.
-                                </p>
-                                <a href="#" class="events__list-item-details">
-                                    Подробней
-                                </a>
-                            </article>
+                            <div class="events__mobile-list-item">
+                                <picture class="events__mobile-list-item-logo">
+                                    <source srcset="img/events/event1-1024.jpg" media="(max-width:1024px)">
+                                    <img src="img/events/event1.jpg" alt="event logo" class="events__list-item-logo-img">
+                                </picture>
+                                <article class="events__mobile-list-item-about">
+                                    <p class="events__mobile-list-item-about-place">
+                                        Музей им. Щусева
+                                        <br>с 20 марта по 30 апреля
+                                    </p>
+                                    <p class="events__mobile-list-item-about-name">
+                                        Книжная гравюра в живом восприятии
+                                    </p>
+                                    <p class="events__mobile-list-item-about-desc">
+                                        Один из ведущих флорентийских художников Кватроченто,
+                                        основатель художественной династии, которую продолжили
+                                        его брат Давид и сын Ридольфо.
+                                    </p>
+                                    <a href="#" class="events__mobile-list-item-details">
+                                        Подробней
+                                    </a>
+                                </article>
+                            </div>
+                            
                           </div>
                           <div class="swiper-slide">
-                            <picture class="events__list-item-logo">
-                                <source srcset="img/events/event2-1024.jpg" media="(max-width:1024px)">
-                                <img src="img/events/event2.jpg" alt="event logo" class="events__list-item-logo-img">
-                            </picture>
-                            <article class="events__list-item-about">
-                                <p class="events__list-item-about-place">
-                                    ММОМА
-                                    <br>24 марта 19:00
-                                </p>
-                                <p class="events__list-item-about-name">
-                                    «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
-                                </p>
-                                <p class="events__list-item-about-desc">
-                                    Высокий уровень вовлечения представителей целевой
-                                    аудитории является четким доказательством простого факта.
-                                </p>
-                                <a href="#" class="events__list-item-details">
-                                    Подробней
-                                </a>
-                            </article>
+                            <div class="events__mobile-list-item">
+                                <picture class="events__mobile-list-item-logo">
+                                    <source srcset="img/events/event2-1024.jpg" media="(max-width:1024px)">
+                                    <img src="img/events/event2.jpg" alt="event logo" class="events__mobile-list-item-logo-img">
+                                </picture>
+                                <article class="events__mobile-list-item-about">
+                                    <p class="events__mobile-list-item-about-place">
+                                        ММОМА
+                                        <br>24 марта 19:00
+                                    </p>
+                                    <p class="events__mobile-list-item-about-name">
+                                        «Открытая дискуссия». Дмитрий Петров и Сергей Ильин.
+                                    </p>
+                                    <p class="events__mobile-list-item-about-desc">
+                                        Высокий уровень вовлечения представителей целевой
+                                        аудитории является четким доказательством простого факта.
+                                    </p>
+                                    <a href="#" class="events__mobile-list-item-details">
+                                        Подробней
+                                    </a>
+                                </article>
+                            </div>
+                            
                           </div>
                           <div class="swiper-slide">
-                            <picture class="events__list-item-logo">
-                                <source srcset="img/events/event3-1024.jpg" media="(max-width:1024px)">
-                                <img src="img/events/event3.jpg" alt="event logo" class="events__list-item-logo-img">
-                            </picture>
-                            <article class="events__list-item-about">
-                                <p class="events__list-item-about-place">
-                                    Еврейский музей
-                                    <br>с 31 марта по 21 апреля
-                                </p>
-                                <p class="events__list-item-about-name">
-                                    Выставка «Формация 2020»
-                                </p>
-                                <p class="events__list-item-about-desc">
-                                    Идейные соображения высшего порядка, а также современная методология разработки играет
-                                    важную роль в формировании глубокомысленных рассуждений.
-                                </p>
-                                <a href="#" class="events__list-item-details">
-                                    Подробней
-                                </a>
-                            </article>
+                            <div class="events__mobile-list-item">
+                                <picture class="events__mobile-list-item-logo">
+                                    <source srcset="img/events/event3-1024.jpg" media="(max-width:1024px)">
+                                    <img src="img/events/event3.jpg" alt="event logo" class="events__mobile-list-item-logo-img">
+                                </picture>
+                                <article class="events__mobile-list-item-about">
+                                    <p class="events__mobile-list-item-about-place">
+                                        Еврейский музей
+                                        <br>с 31 марта по 21 апреля
+                                    </p>
+                                    <p class="events__mobile-list-item-about-name">
+                                        Выставка «Формация 2020»
+                                    </p>
+                                    <p class="events__mobile-list-item-about-desc">
+                                        Идейные соображения высшего порядка, а также современная методология разработки играет
+                                        важную роль в формировании глубокомысленных рассуждений.
+                                    </p>
+                                    <a href="#" class="events__mobile-list-item-details">
+                                        Подробней
+                                    </a>
+                                </article>
+                            </div>
+                            
                           </div>
                           <div class="swiper-slide">
-                            <picture class="events__list-item-logo">
-                                <source srcset="img/events/event4-1024.jpg" media="(max-width:1024px)">
-                                <img src="img/events/event4.jpg" alt="event logo" class="events__list-item-logo-img">
-                            </picture>
-                            <article class="events__list-item-about">
-                                <p class="events__list-item-about-place">
-                                    Еврейский музей
-                                    <br>с 31 марта по 21 апреля
-                                </p>
-                                <p class="events__list-item-about-name">
-                                    Выставка «Формация 2020»
-                                </p>
-                                <p class="events__list-item-about-desc">
-                                    Идейные соображения высшего порядка, а также современная методология разработки играет
-                                    важную роль в формировании глубокомысленных рассуждений.
-                                </p>
-                                <a href="#" class="events__list-item-details">
-                                    Подробней
-                                </a>
-                            </article>
+                            <div class="events__mobile-list-item">
+                                <picture class="events__mobile-list-item-logo">
+                                    <source srcset="img/events/event4-1024.jpg" media="(max-width:1024px)">
+                                    <img src="img/events/event4.jpg" alt="event logo" class="events__mobile-list-item-logo-img">
+                                </picture>
+                                <article class="events__mobile-list-item-about">
+                                    <p class="events__mobile-list-item-about-place">
+                                        Еврейский музей
+                                        <br>с 31 марта по 21 апреля
+                                    </p>
+                                    <p class="events__mobile-list-item-about-name">
+                                        Выставка «Формация 2020»
+                                    </p>
+                                    <p class="events__mobile-list-item-about-desc">
+                                        Идейные соображения высшего порядка, а также современная методология разработки играет
+                                        важную роль в формировании глубокомысленных рассуждений.
+                                    </p>
+                                    <a href="#" class="events__mobile-list-item-details">
+                                        Подробней
+                                    </a>
+                                </article>
+                            </div>
+                            
                           </div>
                           <div class="swiper-slide">
-                            <picture class="events__list-item-logo">
-                                <source srcset="img/events/event5-1024.jpg" media="(max-width:1024px)">
-                                <img src="img/events/event5.jpg" alt="event logo" class="events__list-item-logo-img">
-                            </picture>
-                            <article class="events__list-item-about">
-                                <p class="events__list-item-about-place">
-                                    Еврейский музей
-                                    <br>с 31 марта по 21 апреля
-                                </p>
-                                <p class="events__list-item-about-name">
-                                    Выставка «Формация 2020»
-                                </p>
-                                <p class="events__list-item-about-desc">
-                                    Идейные соображения высшего порядка, а также современная методология разработки играет
-                                    важную роль в формировании глубокомысленных рассуждений.
-                                </p>
-                                <a href="#" class="events__list-item-details">
-                                    Подробней
-                                </a>
-                            </article>
+                            <div class="events__mobile-list-item">
+                                <picture class="events__mobile-list-item-logo">
+                                    <source srcset="img/events/event5-1024.jpg" media="(max-width:1024px)">
+                                    <img src="img/events/event5.jpg" alt="event logo" class="events__mobile-list-item-logo-img">
+                                </picture>
+                                <article class="events__mobile-list-item-about">
+                                    <p class="events__mobile-list-item-about-place">
+                                        Еврейский музей
+                                        <br>с 31 марта по 21 апреля
+                                    </p>
+                                    <p class="events__mobile-list-item-about-name">
+                                        Выставка «Формация 2020»
+                                    </p>
+                                    <p class="events__mobile-list-item-about-desc">
+                                        Идейные соображения высшего порядка, а также современная методология разработки играет
+                                        важную роль в формировании глубокомысленных рассуждений.
+                                    </p>
+                                    <a href="#" class="events__mobile-list-item-details">
+                                        Подробней
+                                    </a>
+                                </article>
+                            </div>
+                            
                           </div>
                         </div>
                         <div class="event-swiper-pagination"></div>
@@ -1343,7 +1358,7 @@
                             <path class="slider-btn-arrow" d="M14 10L19 15L14 20" stroke="#fff"></path>
                         </svg>
                     </div>
-                    <div class="swiper projectsSwiper">
+                    <div class="swiper projects__Swiper">
                         <div class="swiper-wrapper projects-swiper-wrapper">
                             <div class="swiper-slide projects-swiper-slide">
                                 <img src="img/projects_slider/img-1.svg" alt="" class="projects__partners-slider-img">
@@ -1465,8 +1480,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__wrap">
-                <div class="header__desktop-logo">
-                    <img src="img/logo.png" alt="logo" class="header__desktop-logo-img">
+                <div class="footer__desktop-logo">
+                    <img src="img/logo.png" alt="logo" class="footer__desktop-logo-img">
                 </div>
                 <div class="footer__social">
                     <ul class="footer__social-list">

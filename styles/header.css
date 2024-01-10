@@ -155,6 +155,11 @@
   left: 0;
   width: 100dvw;
 }
+@media (max-width: 1400px) {
+  .header__desktop-menu-list-item:not(:last-child) {
+    padding-right: 29px;
+  }
+}
 @media (max-width: 1200px) {
   .header {
     padding: 29px 0;
@@ -173,16 +178,34 @@
   .header {
     padding: 12px 0;
   }
+  .header__mobile-overlay {
+    padding: 14px 50px;
+    top: 46px;
+  }
   .header__mobile-burger {
     width: 25px;
     height: 18px;
   }
   .header__mobile-burger-span:nth-child(2) {
-    top: 6px;
+    top: 8px;
     width: 69%;
   }
   .header__mobile-burger-span:last-child {
     width: 45%;
+  }
+  .header__mobile-burger-span--active:first-child {
+    rotate: 45deg;
+    top: 4px;
+  }
+  .header__mobile-burger-span--active:nth-child(2) {
+    opacity: 0;
+  }
+  .header__mobile-burger-span--active:last-child {
+    width: 100%;
+    rotate: -45deg;
+    top: 14px;
+    left: 3px;
+    transform-origin: left;
   }
   .header__mobile-logo {
     width: 96.8px;
