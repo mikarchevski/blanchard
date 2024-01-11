@@ -456,3 +456,66 @@ function burgerMenu(){
  };
  
  burgerMenu();
+
+
+ function publicationsSelector(){
+  let selectorHeader = document.querySelector('.publications__desc-mobile-filter-selector');
+  let selectorIcon = document.querySelector('.publications__desc-mobile-filter-selector-icon');
+  let selectorOptions = document.querySelector('.publications__desc-mobile-filter-selector-options');
+  // let items =;
+
+
+  selectorHeader.addEventListener('click', ()=>{
+    selectorOptions.classList.toggle('publications__desc-mobile-filter-selector-options--active');
+    selectorIcon.classList.toggle('publications__desc-mobile-filter-selector-icon--active');
+    document.querySelectorAll('.publications__desc-mobile-filter-selector-options-item-name').forEach(item=>{
+      item.classList.toggle('publications__desc-mobile-filter-selector-options-item-name--show');
+    });
+  });
+
+  document.querySelectorAll('.publications__desc-mobile-filter-selector-options-item-name').forEach(item=>{
+    item.addEventListener('click',()=>{
+      item.classList.toggle('publications__desc-mobile-filter-selector-options-item-name--active');
+      // document.querySelectorAll('.publications__desc-mobile-filter-selector-options-item-name-close').forEach(e=>{
+        
+      //   e.classList.toggle('publications__desc-mobile-filter-selector-options-item-name-close--active');
+
+      // });
+      // close.classList.toggle('publications__desc-mobile-filter-selector-options-item-name-close--active')
+      // item.nextEl.classList.toggle('publications__desc-mobile-filter-selector-options-item-name--close--active');
+      });
+    });
+
+    let intervalId;
+    document.querySelectorAll('.publications__desc-mobile-filter-selector-options-item-name').forEach(e=>{
+      e.addEventListener('click',e=>{
+        let menu = e.currentTarget.dataset.path;
+        let currentItem = document.querySelector(`[data-target=${menu}]`);
+        if (!currentItem.classList.contains('open')){
+          currentItem.classList.add('publications__desc-mobile-filter-selector-options-item-name-close--active');
+          intervalId= setTimeout(()=>{
+            currentItem.classList.add('open');
+          },0);
+        };
+        if (currentItem.classList.contains('open')){
+          currentItem.classList.remove('publications__desc-mobile-filter-selector-options-item-name-close--active');
+          intervalId= setTimeout(()=>{
+            currentItem.classList.remove('open');
+          },0);
+        };
+      });
+    });
+    
+
+  
+  // selectItem.forEach( item => {
+  //   item.addEventListener('click', ()=> {
+  //     let currentValue = document.querySelector('.gallery__desc-filter-selector-header-current-mobile');
+  //     currentValue.innerHTML = item.innerHTML;
+  //     selectorOptions.classList.toggle('publications__desc-mobile-filter-selector-options-item--active');
+  //     selectorIcon.classList.toggle('publication__desc-mobile-filter-selector-icon--active');
+  //   });
+  // });
+}
+
+publicationsSelector();

@@ -127,6 +127,7 @@
     }
 
     .publications{
+        background-image: url("../img/publicationsBG-1024.jpg");
         &__desc{
             padding: 0px 20px 0 0;
         }
@@ -281,7 +282,10 @@
             &-desc{
                 &-article{
                     &-about{
-                        font-size: 1.2em;
+                        font-size: 1.6em;
+                    }
+                    &-dates{
+                        padding: 13px 0 6px 0;
                     }
                 }
             }
@@ -310,6 +314,8 @@
         }
     }
     .publications{
+        background-image: url("../img/publicationsBG-768.jpg");
+
         &__Swiper{
             display: none;
         }
@@ -374,6 +380,14 @@
                 }
             }
         }
+        &__maps{
+            width: 320px;
+            height: 320px;
+            &-iframe{
+                width: 320px;
+            height: 320px;
+            }
+        }
     }
     
 }
@@ -415,6 +429,7 @@
         padding: 0 15px;
     }
     .top{
+        padding-bottom: 17px;
         &__slider{
             &-article{
                 padding-bottom: 37px;
@@ -435,22 +450,31 @@
         }
     }
     .about-us{
+        padding: 50px 0 41px;
         &__article{
             &-title{
                 font-size: 2.8em;
+                padding-bottom: 12px;
             }
             &-text{
                 font-size: 1.4em;
+                line-height: 28px;
             }
         }
     }
     .gallery{
+        padding: 50px 0 42px;
         &__desc{
             &-title{
                 font-size: 2.8em;
+                padding-bottom: 12px;
             }
             &-filter{
-                font-size: 1.6em;
+                &-title{
+                    font-size: 1em;
+                    padding: 0 0 5px 0;
+                }
+                
             }
             &-download{
                 font-size: 1.6em;
@@ -458,9 +482,12 @@
         }
     }
     .catalog{
+        padding: 50px 0;
         &__about{
+            padding: 0;
             &-title{
                 font-size: 2.8em;
+                padding: 0;
             }
             &-countries{
                 &-list{
@@ -484,17 +511,30 @@
             
         }
         &__info{
+            gap: 54px;
             &-desc{
                 &-photo{
                     width: 290px;
+                }
+                &-article{
+                    padding: 17px 0 0 0;
                 }
             }
             &-accordion{
                 &-artists{
                     &-list{
+                        padding: 19px 0 0 0;
                         max-height: fit-content;
                         &-item{
                             width: 100%;
+                            
+                        }
+                    }
+                }
+                &-list{
+                    &-item{
+                        &-label{
+                            padding: 18px 0 20px;
                         }
                     }
                 }
@@ -502,13 +542,12 @@
         }
     }
     .events{
+        padding: 0px 0 16px 0;
         &__title{
             font-size: 2.8em;
+            padding-bottom: 13px;
         }
     }
-
-    
-
     .projects{
         &__articles{
             &-title{
@@ -521,5 +560,20 @@
             }
         }
     }
+    .publications{
+        padding: 35px 0;
+        background-image: url("../img/publicationsBG-320.jpg");
 
+        &__desc{
+            &-title{
+                font-size: 2.8em;
+            }
+            &-filter{
+                display: none;
+            }
+            &-mobile-filter{
+                display: block;
+            }
+        }
+    }
 }

@@ -380,8 +380,6 @@ button {
                         font-style: normal;
                         font-weight: 400;
                         line-height: 32px;
-                        /* 200% */
-
                     }
 
                     &-icon {
@@ -458,8 +456,6 @@ button {
     }
     &-swiper {
         &-slide {
-    //         display: block;
-    //         position: relative;
              height: auto !important;
              max-width: 350px !important;
              width: 350px !important;
@@ -1008,6 +1004,113 @@ button {
     &__desc {
         padding: 0px 172px 0 0;
 
+        &-mobile{
+            &-filter{
+                display: none;
+                &-selector{
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    gap: 15px;
+                    &-title{
+                        font-size: 1.6em;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 32px; /* 200% */
+                    }
+                    &-icon {
+                        transition: all .3s ease;
+
+                        &--active {
+                            transform: rotate(180deg);
+                        }
+                    }
+                    &-options{
+                        list-style: none;
+                        &-item {
+                            display: block;
+                            position: relative;
+        
+                            &-name {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                position: absolute;
+                                opacity: 0;
+                                font-size: 1.6em;
+                                font-weight: 400;
+                                line-height: 32px;
+                                padding-left: 24px;
+                                cursor: pointer;
+        
+                                &::first-letter {
+                                    text-transform: capitalize;
+                                }
+                                &-close{
+                                    display: none;
+                                    &--active{
+                                        display: inline-block;
+                                    }
+                                }
+        
+                                &--show {
+                                    position: relative;
+                                    opacity: 1;
+                                    // &:after {
+                                    //     content: '';
+                                    //     position: absolute;
+                                    //     top: 15px;
+                                    //     left: 5px;
+                                    //     width: 4px;
+                                    //     height: 4px;
+                                    //     background-color: currentColor;
+                                    //     border-radius: 50%;
+                                    // }
+                                }
+                                &--active {
+                                    position: relative;
+                                    opacity: 1;
+                                        color: rgb(194, 131, 243);
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 15px;
+                                        left: 5px;
+                                        width: 4px;
+                                        height: 4px;
+                                        background-color: rgb(194, 131, 243);
+                                        color: rgb(194, 131, 243);
+                                        border-radius: 50%;
+                                    }
+                                }
+        
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 0;
+                                    width: 12px;
+                                    height: 12px;
+                                    border: 1px solid currentColor;
+                                }
+        
+                                &:hover {
+                                    color: rgba(194, 131, 243, 1);
+                                }
+                            }
+        
+                            &-checkbox {
+                                display: none;
+                            }
+                        }
+                        &--active{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+
         &-title {
             display: block;
             padding: 16px 0 17px 0;
@@ -1016,12 +1119,15 @@ button {
         }
 
         &-filter {
+            display: block;
+            position: relative;
             &-title {
                 font-size: 1.6em;
                 font-weight: 700;
                 line-height: 32px;
             }
 
+           
             &-list {
                 list-style: none;
 
@@ -1077,6 +1183,9 @@ button {
         }
 
         &-price {
+            display: block;
+            position: relative;
+            width: 290px;
             &-title {
                 font-size: 1.6em;
                 font-weight: 700;

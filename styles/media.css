@@ -88,6 +88,9 @@
   .events__list-all {
     max-height: 1500px;
   }
+  .publications {
+    background-image: url("../img/publicationsBG-1024.jpg");
+  }
   .publications__desc {
     padding: 0px 20px 0 0;
   }
@@ -187,7 +190,10 @@
     margin: 0;
   }
   .catalog__info-desc-article-about {
-    font-size: 1.2em;
+    font-size: 1.6em;
+  }
+  .catalog__info-desc-article-dates {
+    padding: 13px 0 6px 0;
   }
   .projects__Swiper {
     width: 434px;
@@ -202,6 +208,9 @@
   .projects__partners-slider-img {
     width: 104.743px;
     height: 25.936px;
+  }
+  .publications {
+    background-image: url("../img/publicationsBG-768.jpg");
   }
   .publications__Swiper {
     display: none;
@@ -255,6 +264,14 @@
   .contacts__place-form-name, .contacts__place-form-phone {
     width: 290px;
   }
+  .contacts__maps {
+    width: 320px;
+    height: 320px;
+  }
+  .contacts__maps-iframe {
+    width: 320px;
+    height: 320px;
+  }
 }
 @media (max-width: 670px) {
   .top__slider-article {
@@ -282,6 +299,9 @@
   .container {
     padding: 0 15px;
   }
+  .top {
+    padding-bottom: 17px;
+  }
   .top__slider-article {
     padding-bottom: 37px;
   }
@@ -298,23 +318,40 @@
     width: 200px;
     height: 40px;
   }
+  .about-us {
+    padding: 50px 0 41px;
+  }
   .about-us__article-title {
     font-size: 2.8em;
+    padding-bottom: 12px;
   }
   .about-us__article-text {
     font-size: 1.4em;
+    line-height: 28px;
+  }
+  .gallery {
+    padding: 50px 0 42px;
   }
   .gallery__desc-title {
     font-size: 2.8em;
+    padding-bottom: 12px;
   }
-  .gallery__desc-filter {
-    font-size: 1.6em;
+  .gallery__desc-filter-title {
+    font-size: 1em;
+    padding: 0 0 5px 0;
   }
   .gallery__desc-download {
     font-size: 1.6em;
   }
+  .catalog {
+    padding: 50px 0;
+  }
+  .catalog__about {
+    padding: 0;
+  }
   .catalog__about-title {
     font-size: 2.8em;
+    padding: 0;
   }
   .catalog__about-countries-list-item:not(:last-child) {
     padding: 0 9px 0 0;
@@ -327,23 +364,50 @@
   .catalog__about-countries-list-item-link-img--active {
     padding: 6px;
   }
+  .catalog__info {
+    gap: 54px;
+  }
   .catalog__info-desc-photo {
     width: 290px;
   }
+  .catalog__info-desc-article {
+    padding: 17px 0 0 0;
+  }
   .catalog__info-accordion-artists-list {
+    padding: 19px 0 0 0;
     max-height: fit-content;
   }
   .catalog__info-accordion-artists-list-item {
     width: 100%;
   }
+  .catalog__info-accordion-list-item-label {
+    padding: 18px 0 20px;
+  }
+  .events {
+    padding: 0px 0 16px 0;
+  }
   .events__title {
     font-size: 2.8em;
+    padding-bottom: 13px;
   }
   .projects__articles-title {
     font-size: 2.8em;
   }
   .projects__partners-title {
     font-size: 1.8em;
+  }
+  .publications {
+    padding: 35px 0;
+    background-image: url("../img/publicationsBG-320.jpg");
+  }
+  .publications__desc-title {
+    font-size: 2.8em;
+  }
+  .publications__desc-filter {
+    display: none;
+  }
+  .publications__desc-mobile-filter {
+    display: block;
   }
 }
 
