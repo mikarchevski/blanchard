@@ -6,7 +6,9 @@
     margin-right: auto;
     margin-left: auto;
 }
-
+html{
+    height: 100dvh;
+}
 .body{
     &--active{
         overflow: hidden;
@@ -906,7 +908,6 @@ button {
             &-about {
                 display: block;
                 position: relative;
-                height: 386px;
                 padding: 13px 0 0 47px;
 
                 &-place {
@@ -942,6 +943,7 @@ button {
                 display: inline-block;
                 position: absolute;
                 bottom: 42px;
+                
                 border-bottom: 1px solid;
                 color: #9D5CD0;
                 text-decoration: none;
@@ -1295,6 +1297,7 @@ button {
         justify-content: center;
         align-items: center;
         width: 1436px;
+        height: auto;;
     }
     &__articles {
         max-width: 1080px;

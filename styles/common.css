@@ -6,6 +6,10 @@
   margin-left: auto;
 }
 
+html {
+  height: 100dvh;
+}
+
 .body--active {
   overflow: hidden;
 }
@@ -755,7 +759,6 @@ button:active {
 .events__list-item-about {
   display: block;
   position: relative;
-  height: 386px;
   padding: 13px 0 0 47px;
 }
 .events__list-item-about-place {
@@ -1073,6 +1076,7 @@ button:active {
   justify-content: center;
   align-items: center;
   width: 1436px;
+  height: auto;
 }
 .projects__articles {
   max-width: 1080px;

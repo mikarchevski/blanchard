@@ -1,17 +1,9 @@
 .swiper {
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   overflow: hidden;
-  list-style: none;
-  padding: 0;
   z-index: 1;
   display: block;
-  min-height: 0;
-  min-width: 0;
-  width: 100%;
-  max-width: 100%;
-  max-height: 100vh;
+  height: 100dvh;
 }
 
 .mySwiper {
@@ -21,6 +13,7 @@
   z-index: -1;
   width: 100% !important;
   max-height: 800px;
+  height: auto;
 }
 @media (max-width: 670px) {
   .mySwiper {
@@ -44,6 +37,7 @@
 
 .gallerySwiper {
   max-height: 800px;
+  height: auto;
 }
 @media (max-width: 1200px) {
   .gallerySwiper {
@@ -218,17 +212,22 @@
   transform: rotate(180deg);
 }
 
-.gallerySwiperMobile {
-  width: 100%;
-  max-width: 100%;
-  max-height: 100vh;
-  min-height: 0;
-  min-width: 0;
-}
-.gallerySwiperMobile-slide {
+.gallerySwiper-nav-top {
   display: flex;
-  align-items: center;
-  justify-content: center;
+}
+@media (max-width: 550px) {
+  .gallerySwiper-nav-top {
+    display: none;
+  }
+}
+
+.gallerySwiper-nav-bottom {
+  display: none;
+}
+@media (max-width: 550px) {
+  .gallerySwiper-nav-bottom {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=swipers.css.map */

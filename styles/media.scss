@@ -113,9 +113,6 @@
                         padding: 3px 28px 0 0
                     }
                 }
-                &-details{
-                    bottom: 0;
-                }
                 &:not(:nth-child(3n),:last-child){
                     margin: 0 29px 50px 0;
                 }
@@ -170,6 +167,7 @@
         box-sizing: border-box;
     }
 
+    
     .gallery{
         &__desktop{
             display: none;
@@ -178,14 +176,10 @@
             display: block;
         }
         &__desc{
-            &-filter{
-                &-selector,&-selector-options{
-                    width: 100%;
-                }
-            }
+            
             &-download{
                 position: relative;
-                padding: 20px 0 0 0;
+                padding: 15px 0 0 0;
             }
         }
     }
@@ -225,6 +219,13 @@
                 &:nth-child(3n){
                     margin: 0 29px 50px 0;
                 }
+
+                &-about{
+                    
+                    &-desc{
+                        padding: 3px 9px 0;
+                    }
+                }
             }
         }
     }
@@ -263,6 +264,13 @@
 }
 @media (max-width:768px){
    
+    .gallery{
+        &__desc{
+            &-filter{
+                padding-bottom: 25px;
+            }
+        }
+    }
     .catalog{
         &__info{
             &-accordion{
@@ -287,6 +295,15 @@
                     &-dates{
                         padding: 13px 0 6px 0;
                     }
+                }
+            }
+        }
+    }
+    .events{
+        &__list{
+            &-item{
+                &-about{
+                    height: 60%;
                 }
             }
         }
@@ -463,23 +480,30 @@
         }
     }
     .gallery{
-        padding: 50px 0 42px;
+        padding: 50px 0 40px;
         &__desc{
             &-title{
                 font-size: 2.8em;
                 padding-bottom: 12px;
             }
             &-filter{
+                padding: 0 0 38px;
                 &-title{
-                    font-size: 1em;
+                    font-size: 1.6em;
                     padding: 0 0 5px 0;
                 }
-                
+                &-selector,&-selector-options{
+                    width: 100%;
+                }
             }
             &-download{
                 font-size: 1.6em;
             }
         }
+        
+    }
+    .gallerySwiper-nav{
+        margin: 25px auto 0 auto;
     }
     .catalog{
         padding: 50px 0;

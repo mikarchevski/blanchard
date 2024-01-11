@@ -14,10 +14,9 @@ var swiper = new Swiper(".mySwiper", {
 var swiper1 = new Swiper(".gallerySwiper", {
   slidesPerView: 3,
   slidesPerGroup: 3,
-  grid: {
-    rows: 2,
-  },
+  
   spaceBetween: 30,
+  
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -32,17 +31,40 @@ var swiper1 = new Swiper(".gallerySwiper", {
       },
       breakpoints: {
         640: {
+          grid: {
+            rows: 2,
+          },
           slidesPerView: 2,
+          slidesPerGroup: 2,
           spaceBetween: 20,
+          lazy: true,
         },
         1268: {
+          grid: {
+            rows: 2,
+          },
           slidesPerView: 2,
           slidesPerGroup:2,
-          spaceBetween: 20,
+          spaceBetween: 21,
+          lazy: true,
         },
-        1524: {
+        1660: {
+          grid: {
+            rows: 2,
+          },
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 22,
+          lazy: true,
+        },
+        1700:{
+          grid: {
+            rows: 2,
+          },
           slidesPerView: 3,
           slidesPerGroup: 3,
+          spaceBetween: 23,
+          lazy: true,
         },
       },
   });
@@ -197,39 +219,60 @@ var swiper1 = new Swiper(".gallerySwiper", {
     },
   }); 
   var swiper = new Swiper(".gallerySwiperMobile", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-      renderFraction: function (currentClass, totalClass) {
-      return '<span class="' + currentClass + '"></span>' + '/'+
-              '<span class="' + totalClass + '"></span>';
-      },
-    },
     breakpoints: {
-        
+      320:{
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+          renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + '/'+
+                  '<span class="' + totalClass + '"></span>';
+          },
+        },
+      },
       640: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 20,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+          renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + '/'+
+                  '<span class="' + totalClass + '"></span>';
+          },
+        },
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 34,
-      },
-      1200:{
+        grid:{
+          rows:2, 
+        },
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 40,
-      }
+        
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+          renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + '/'+
+                  '<span class="' + totalClass + '"></span>';
+          },
+        },
+      },
     },
   });
 
