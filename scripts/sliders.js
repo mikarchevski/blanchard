@@ -98,9 +98,6 @@ var swiper1 = new Swiper(".gallerySwiper", {
   var swiper2 = new Swiper(".publications__Swiper", {
     slidesPerView: 3,
     slidesPerGroup: 3,
-    grid: {
-      rows: 1,
-    },
     spaceBetween: 50,
     navigation: {
         nextEl: ".publications-swiper-button-next",
@@ -123,19 +120,30 @@ var swiper1 = new Swiper(".gallerySwiper", {
         spaceBetween: 20,
       },
       768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 20,
       },
-      1024: {
+      993:{
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 20,
+      },
+      994: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 34,
       },
-      1200:{
+      1659:{
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 42,
+      },
+      1661:{
         slidesPerView: 3,
         slidesPerGroup: 3,
-        spaceBetween: 40,
-      }
+        spaceBetween: 43,
+      },
     },
   });
 
@@ -218,18 +226,21 @@ var swiper1 = new Swiper(".gallerySwiper", {
       }
     },
   }); 
+
+
   var swiper = new Swiper(".gallerySwiperMobile", {
+
     breakpoints: {
       320:{
         slidesPerView: 1,
         slidesPerGroup: 1,
         spaceBetween: 20,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".gallery-swiper-mobile-button-next",
+          prevEl: ".gallery-swiper-mobile-button-prev",
         },
-      pagination: {
-          el: ".swiper-pagination",
+        pagination: {
+          el: ".gallery-swiper-mobile-pagination",
           type: "fraction",
           renderFraction: function (currentClass, totalClass) {
           return '<span class="' + currentClass + '"></span>' + '/'+
@@ -237,15 +248,19 @@ var swiper1 = new Swiper(".gallerySwiper", {
           },
         },
       },
-      640: {
+      600: {
+        grid:{
+          rows:2, 
+        },
         slidesPerView: 2,
         slidesPerGroup: 2,
+        spaceBetween: 20,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".gallery-swiper-mobile-button-next",
+          prevEl: ".gallery-swiper-mobile-button-prev",
         },
-      pagination: {
-          el: ".swiper-pagination",
+        pagination: {
+          el: ".gallery-swiper-mobile-pagination",
           type: "fraction",
           renderFraction: function (currentClass, totalClass) {
           return '<span class="' + currentClass + '"></span>' + '/'+
@@ -259,13 +274,33 @@ var swiper1 = new Swiper(".gallerySwiper", {
         },
         slidesPerView: 2,
         slidesPerGroup: 2,
-        
+        spaceBetween: 20,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".gallery-swiper-mobile-button-next",
+          prevEl: ".gallery-swiper-mobile-button-prev",
         },
       pagination: {
-          el: ".swiper-pagination",
+          el: ".gallery-swiper-mobile-pagination",
+          type: "fraction",
+          renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' + '/'+
+                  '<span class="' + totalClass + '"></span>';
+          },
+        },
+      },
+      992: {
+        grid:{
+          rows:2, 
+        },
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 20,
+        navigation: {
+          nextEl: ".gallery-swiper-mobile-button-next",
+          prevEl: ".gallery-swiper-mobile-button-prev",
+        },
+      pagination: {
+          el: ".gallery-swiper-mobile-pagination",
           type: "fraction",
           renderFraction: function (currentClass, totalClass) {
           return '<span class="' + currentClass + '"></span>' + '/'+

@@ -45,7 +45,37 @@
   }
 }
 
-.gallerySwiper-nav {
+@media (max-width: 600px) {
+  .gallerySwiperMobile {
+    height: auto;
+  }
+}
+
+.gallerySwiperMobile-slide {
+  height: auto !important;
+}
+.gallerySwiperMobile-slide-img {
+  width: auto;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .gallerySwiperMobile-slide-img {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .gallerySwiperMobile-slide-img {
+    width: auto;
+  }
+}
+@media (max-width: 425px) {
+  .gallerySwiperMobile-slide-img {
+    width: 100%;
+  }
+}
+
+.gallerySwiper-nav,
+.gallerySwiper-nav-top {
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -55,13 +85,16 @@
   margin: 0 0 30px 0;
 }
 @media (max-width: 1200px) {
-  .gallerySwiper-nav {
+  .gallerySwiper-nav,
+  .gallerySwiper-nav-top {
     margin: 25px 0 30px 0;
   }
 }
 
 .gallery-swiper-button-next,
-.gallery-swiper-button-prev {
+.gallery-swiper-button-prev,
+.gallery-swiper-mobile-button-prev,
+.gallery-swiper-mobile-button-next {
   display: block;
   position: relative;
   height: 30px;
@@ -81,11 +114,14 @@
 .publications-swiper-button-next::after,
 .publications-swiper-button-prev::after,
 .projects-swiper-button-next::after,
-.projects-swiper-button-prev::after {
+.projects-swiper-button-prev::after,
+.gallery-swiper-mobile-button-prev::after,
+.gallery-swiper-mobile-button-next::after {
   content: unset;
 }
 
-.gallery-swiper-button-prev {
+.gallery-swiper-button-prev,
+.gallery-swiper-mobile-button-prev {
   transform: rotate(180deg);
 }
 
@@ -123,6 +159,12 @@
   padding: 50px 0 0 0;
   height: auto;
 }
+@media (max-width: 992px) {
+  .publications__Swiper {
+    height: 100%;
+    width: 100%;
+  }
+}
 
 .publications-swiper-slide {
   display: flex;
@@ -130,8 +172,6 @@
   flex-direction: column;
   justify-content: flex-start;
   font-size: 18px;
-  width: 350px !important;
-  height: 515px !important;
   align-items: center;
 }
 
@@ -161,7 +201,8 @@
   transform: rotate(180deg);
 }
 
-.publications-swiper-pagination {
+.publications-swiper-pagination,
+.gallery-swiper-mobile-pagination {
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -180,6 +221,7 @@
 
 @media (max-width: 670px) {
   .eventSwiper {
+    height: 100%;
     width: 290px;
     max-height: 773px;
   }
@@ -211,24 +253,6 @@
 
 .projects-swiper-button-prev {
   transform: rotate(180deg);
-}
-
-.gallerySwiper-nav-top {
-  display: flex;
-}
-@media (max-width: 550px) {
-  .gallerySwiper-nav-top {
-    display: none;
-  }
-}
-
-.gallerySwiper-nav-bottom {
-  display: none;
-}
-@media (max-width: 550px) {
-  .gallerySwiper-nav-bottom {
-    display: block;
-  }
 }
 
 /*# sourceMappingURL=swipers.css.map */
