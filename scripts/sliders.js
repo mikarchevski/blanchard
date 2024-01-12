@@ -3,9 +3,9 @@ var swiper = new Swiper(".mySwiper", {
     speed: 2000,
     effect: "fade",
     crossFade: true,
-    // autoplay: {
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      disableOnInteraction: false,
+    },
   });
   
 
