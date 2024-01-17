@@ -8,6 +8,7 @@
 
 html {
   height: 100dvh;
+  scroll-behavior: smooth;
 }
 
 .body--active {
@@ -595,6 +596,44 @@ button:active {
   background: white;
   transition: all 0.35s;
 }
+.catalog__info-accordion-list-item-content-empty {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 25px 0 0 0;
+  gap: 24px;
+}
+.catalog__info-accordion-list-item-content-empty-logo {
+  display: block;
+  position: relative;
+  height: 165px;
+  border: 2px solid #B7B7B7;
+  padding: 12px;
+}
+.catalog__info-accordion-list-item-content-empty-desc {
+  display: block;
+  position: relative;
+  max-width: 275px;
+  width: 100%;
+}
+.catalog__info-accordion-list-item-content-empty-desc-title {
+  font-size: 2.4em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+}
+.catalog__info-accordion-list-item-content-empty-desc-text {
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.catalog__info-accordion-list-item-content-empty-desc-link {
+  font-size: 1.6em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
 .catalog__info-accordion-list-item-close {
   display: flex;
   justify-content: flex-end;
@@ -789,6 +828,7 @@ button:active {
 .events__list-item-details {
   display: inline-block;
   position: absolute;
+  margin: 0 0 0 47px;
   bottom: 42px;
   border-bottom: 1px solid;
   color: #9D5CD0;
@@ -809,7 +849,7 @@ button:active {
 }
 .events__list-all {
   transition: all 1.5s;
-  max-height: 1504px;
+  max-height: 2256px;
 }
 .events__showall {
   display: block;
@@ -1097,7 +1137,7 @@ button:active {
   position: relative;
   width: 16px;
   height: 16px;
-  font-size: 1.3em;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1;
   background-color: transparent;
@@ -1105,6 +1145,50 @@ button:active {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.16s ease-out, color 0.16s ease-out;
+}
+.projects__articles-desc-btn:hover {
+  border: none;
+  border-radius: 100px;
+  border: 1px solid #9D5CD0;
+  color: #000000;
+  background: #D1A9F0;
+}
+.projects__articles-desc-btn:before {
+  position: absolute;
+  width: 250px;
+  height: auto;
+  bottom: 200%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7px 7px 11px;
+  content: attr(data-tooltip);
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  background-color: #9D5CD0;
+}
+.projects__articles-desc-btn:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: -14px;
+  margin-left: -5px;
+  border-top: 11px solid #9D5CD0;
+  border-right: 11px solid rgba(0, 0, 0, 0);
+  border-left: 11px solid rgba(0, 0, 0, 0);
+}
+.projects__articles-desc-btn:before, .projects__articles-desc-btn:after {
+  opacity: 0;
+  z-index: -1;
+  display: none;
+}
+.projects__articles-desc-btn:hover::after, .projects__articles-desc-btn:hover::before {
+  opacity: 1;
+  z-index: 1;
+  display: block;
 }
 .projects__partners-title {
   font-size: 2.4em;
@@ -1146,7 +1230,8 @@ button:active {
 .contacts__place {
   display: block;
   border: 1px solid #cacaca;
-  padding: 123px 119px 120px 151px;
+  padding: 123px 120px 10px max(160px, (100% - 1920px) / 2 + 160px);
+  flex-grow: 1;
 }
 .contacts__place-article-name {
   font-size: 2.4em;
@@ -1174,7 +1259,7 @@ button:active {
   /* 133.333% */
 }
 .contacts__place-form-name, .contacts__place-form-phone {
-  width: 400px;
+  width: 100%;
   height: 40px;
   border-radius: 100px;
   border: 1px solid #333;
@@ -1182,10 +1267,9 @@ button:active {
   font-size: 1.6em;
   font-weight: 400;
   line-height: 32px;
-  /* 200% */
-}
-.contacts__place-form-name::placeholder, .contacts__place-form-phone::placeholder {
   padding: 0 0 0 23px;
+  color: #333;
+  box-sizing: border-box;
 }
 .contacts__place-form-btn {
   width: 159px;
@@ -1226,7 +1310,7 @@ button:active {
 }
 .contacts__maps {
   height: 700px;
-  width: 100%;
+  width: calc(64.5% + 0px);
 }
 .contacts__maps-iframe {
   width: 100%;

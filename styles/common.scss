@@ -5,14 +5,17 @@
     // padding-left: 30px;
     margin-right: auto;
     margin-left: auto;
+    
 }
 html{
     height: 100dvh;
+    scroll-behavior: smooth;
 }
 .body{
     &--active{
         overflow: hidden;
     }
+    
 }
 
 a {
@@ -703,6 +706,44 @@ button {
                         max-height: 0;
                         background: white;
                         transition: all .35s;
+                        &-empty{
+                            display: flex;
+                            position: relative;
+                            align-items: center;
+                            padding: 25px 0 0 0;
+                            gap: 24px;
+                            &-logo{
+                                display: block;
+                                position: relative;
+                                height: 165px;
+                                border: 2px solid #B7B7B7;
+                                padding: 12px;
+                            }
+                            &-desc{
+                                display: block;
+                                position: relative;
+                                max-width: 275px;
+                                width: 100%;
+                                &-title{
+                                    font-size: 2.4em;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: 32px; /* 133.333% */
+                                }
+                                &-text{
+                                    font-size: 1.6em;
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: normal;
+                                }
+                                &-link{
+                                    font-size: 1.6em;
+                                    font-style: normal;
+                                    font-weight: 600;
+                                    line-height: normal;
+                                }
+                            }
+                        }
                     }
 
                     &-close {
@@ -942,8 +983,8 @@ button {
             &-details {
                 display: inline-block;
                 position: absolute;
+                margin: 0 0 0 47px;
                 bottom: 42px;
-                
                 border-bottom: 1px solid;
                 color: #9D5CD0;
                 text-decoration: none;
@@ -970,7 +1011,7 @@ button {
         &-all {
 
             transition: all 1.5s;
-            max-height: 1504px;
+            max-height: 2256px;
         }
     }
 
@@ -1319,7 +1360,7 @@ button {
                 position: relative;
                 width: 16px;
                 height: 16px;
-                font-size: 1.3em;
+                font-size: 12px;
                 font-weight: 600;
                 line-height: 1;
                 background-color: transparent;
@@ -1327,6 +1368,53 @@ button {
                 border-radius: 50%;
                 cursor: pointer;
                 transition: background-color 0.16s ease-out, color 0.16s ease-out;
+                &:hover{
+                    border: none;
+                    border-radius: 100px;
+                    border: 1px solid #9D5CD0;
+                    color: #000000;
+                    background: #D1A9F0;
+                    
+                }
+                &:before{
+                    position: absolute;
+                    width: 250px;
+                    height: auto;
+                    bottom: 200%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding: 7px 7px 11px;
+                    content: attr(data-tooltip);
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    background-color: #9D5CD0;
+                }
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    left: 0;
+                    top: -14px;
+                    margin-left: -5px;
+                    border-top: 11px solid #9D5CD0;
+                    border-right: 11px solid rgba(0, 0, 0, 0);
+                    border-left: 11px solid rgba(0, 0, 0, 0);
+                }
+                &:before,&:after{
+                    opacity: 0;
+                    z-index: -1;
+                    display: none;
+                }
+                &:hover{
+                    &::after,&::before{
+                        opacity: 1;
+                        z-index: 1;
+                        display: block;
+                    }
+                }
             }
         }
     }
@@ -1378,7 +1466,8 @@ button {
     &__place {
         display: block;
         border: 1px solid #cacaca;
-        padding: 123px 119px 120px 151px;
+        padding: 123px 120px 10px Max(160px, calc((100% - 1920px)/2 + 160px));
+        flex-grow: 1;
 
         &-article {
             &-name {
@@ -1412,7 +1501,7 @@ button {
 
             &-name,
             &-phone {
-                width: 400px;
+                width: 100%;
                 height: 40px;
                 border-radius: 100px;
                 border: 1px solid #333;
@@ -1420,11 +1509,9 @@ button {
                 font-size: 1.6em;
                 font-weight: 400;
                 line-height: 32px;
-
-                /* 200% */
-                &::placeholder {
-                    padding: 0 0 0 23px;
-                }
+                padding: 0 0 0 23px;
+                color: #333;
+                box-sizing: border-box;
             }
 
             &-btn {
@@ -1482,7 +1569,7 @@ button {
 
     &__maps {
         height: 700px;
-        width: 100%;
+        width: calc(64.5% + 0px);
         &-iframe{
             width: 100%;
         }

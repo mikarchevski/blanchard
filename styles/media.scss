@@ -2,6 +2,12 @@
     .container{
         width: 1600px;
     }
+    .contacts{
+        &__place{
+            padding-right: 101px;
+            padding-left: Max(80px, calc((100% - 1600px)/2 + 80px));
+        }
+    }
 }
 @media (max-width:1660px){
     .container{
@@ -10,6 +16,15 @@
     .projects{
         &__Swiper{
             width: 944px;
+        }
+    }
+    .events{
+        &__list{
+            &-item{
+                &:nth-child(3n){
+                    margin: 0 50px 50px 0;
+                }
+            }
         }
     }
 }
@@ -33,6 +48,7 @@
             }
         }
     }
+    
 }
 @media (max-width:1200px){
     .container{
@@ -89,6 +105,23 @@
                     &-list{
                         &-item{
                             width: calc((100% - 24px) / 2);
+                            
+                        }
+                    }
+                }
+                &-list{
+                    &-item{
+                        &-content{
+                            &-empty{
+                                &-logo{
+                                    width: 173px;
+                                    height: 114px;
+                                    &-img{
+                                        width: 173px;
+                                        height: 114px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -115,6 +148,9 @@
                 }
                 &:not(:nth-child(3n),:last-child){
                     margin: 0 29px 50px 0;
+                }
+                &:nth-child(3n){
+                    margin: 0 0 50px 0;
                 }
             }
             &-all{
@@ -152,8 +188,8 @@
         }
     }
     .contacts{
-        &__places{
-            padding: 123px 35px 52px 48px;
+        &__place{
+            padding-left: Max(50px, calc((100vw - 1170px)/2));
         }
     }
 }
@@ -240,7 +276,7 @@
     }
     .contacts{
         &__place{
-            padding: 123px 45px 120px 45px;
+            padding-right: 45px;
             width: 50%;
         }
     }
@@ -566,6 +602,19 @@
                         &-label{
                             padding: 18px 0 20px;
                         }
+                        &-content{
+                            &-empty{
+                                &-logo{
+                                    width: 118px;
+                                    height: 79px;
+                                    transform: rotate(90deg);
+                                    &-img{
+                                        width: 118px;
+                                        height: 79px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -583,6 +632,14 @@
             &-title{
                 font-size: 2.8em;
             }
+            // &-desc{
+            //     &-btn{
+            //         &::before,&::after{
+            //             display: none;
+            //         }
+
+            //     }
+            // }
         }
         &__partners{
             &-title{

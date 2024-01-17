@@ -248,13 +248,13 @@ var swiper1 = new Swiper(".gallerySwiper", {
           },
         },
       },
-      600: {
+      560: {
         grid:{
           rows:2, 
         },
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 20,
+        spaceBetween: 21,
         navigation: {
           nextEl: ".gallery-swiper-mobile-button-next",
           prevEl: ".gallery-swiper-mobile-button-prev",
@@ -268,13 +268,13 @@ var swiper1 = new Swiper(".gallerySwiper", {
           },
         },
       },
-      768: {
+      670: {
         grid:{
           rows:2, 
         },
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 20,
+        spaceBetween: 22,
         navigation: {
           nextEl: ".gallery-swiper-mobile-button-next",
           prevEl: ".gallery-swiper-mobile-button-prev",
@@ -288,13 +288,13 @@ var swiper1 = new Swiper(".gallerySwiper", {
           },
         },
       },
-      992: {
+      800: {
         grid:{
           rows:2, 
         },
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 20,
+        spaceBetween: 23,
         navigation: {
           nextEl: ".gallery-swiper-mobile-button-next",
           prevEl: ".gallery-swiper-mobile-button-prev",
