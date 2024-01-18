@@ -12,6 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Open+Sans:wght@300;400;500;700&family=Oranienbaum&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -1560,24 +1561,19 @@
                     смешаны с не уникальными данными до степени совершенной неузнаваемости,
                     из-за чего возрастает их статус бесполезности.
                     Прежде всего, постоянное информационно-пропагандистское
-                    <button class="projects__articles-desc-btn projects__articles-desc-btn-tip1"
-                        data-tooltip="Пример современных тенденций - современная методология разработки"
-                        aria-label="Пример современных тенденций - современная методология разработки">i</button>
+                    <button id="tip-1"class="projects__articles-desc-btn">i</button>
                     обеспечение нашей деятельности однозначно фиксирует
                     необходимость экономической целесообразности принимаемых решений.
                     И нет сомнений, что действия представителей оппозиции могут
-                    быть рассмотрены <button class="projects__articles-desc-btn projects__articles-desc-btn-tip2"
-                        data-tooltip="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции"
-                        aria-label="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">i</button>
+                    быть рассмотрены <button id="tip-2" class="projects__articles-desc-btn">i</button>
                     исключительно в разрезе маркетинговых и
-                    финансовых <button class="projects__articles-desc-btn projects__articles-desc-btn-tip3"
-                        data-tooltip="В стремелении повысить качество"
-                        aria-label="В стремелении повысить качество">i</button> предпосылок.
+                    финансовых <button id="tip-3" class="projects__articles-desc-btn">
+                       i</button> предпосылок.
                     Банальные, но неопровержимые выводы, а также представители
                     современных социальных резервов призывают нас к новым свершениям,
                     которые, в свою очередь, должны быть смешаны с не уникальными д
                     анными до степени совершенной неузнаваемости.
-                    Подробнее: blanchard-art.ru/projects/about
+                    Подробнее: <a class="projects__articles-desc-link" href="#about">blanchard-art.ru/projects/about</a>
                 </p>
             </article>
             <div class="projects__partners">
@@ -1773,9 +1769,11 @@
         </div>
     </footer>
 
-
+     <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/sliders.js"></script>
+   
 </body>
 
 </html>

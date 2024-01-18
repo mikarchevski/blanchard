@@ -597,3 +597,24 @@ function burgerMenu(){
 }
 
 publicationsSelector();
+
+
+
+
+
+tippy('#tip-1', {
+  theme: 'pink',
+  content: 'Пример современных тенденций - современная методология разработки ',
+});
+tippy('#tip-2', {
+  theme: 'pink',
+  content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  ',
+});
+tippy('#tip-3', {
+  theme: 'pink',
+  content: 'В стремлении повысить качество ',
+});
+
+tippy('#myButton', {
+  content: 'My tooltip!',
+});
